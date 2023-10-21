@@ -1,8 +1,7 @@
 'use client'
-import { useEffect, useState } from 'react'
 import styles from './HeroImage.module.css'
 import Image from 'next/image'
-import bannerCombined from '../../public/bannerCombined.png'
+import bannerCombined from '../../public/BannerCombined.png'
 
 
 export default function HeroImage(){
