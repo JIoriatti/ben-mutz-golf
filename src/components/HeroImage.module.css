@@ -1,0 +1,102 @@
+.absolute_wrapper, .absolute_wrapper * {
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0;
+
+    animation: fade 1s var(--timing) 2.5s forwards;
+}
+.absolute_wrapper{
+    position: absolute;
+    right: -40%;
+    bottom: -50%;
+}
+.absolute_wrapper_2{
+    position: absolute;
+    right: -35%;
+    bottom: -50%;
+}
+.banner_wrapper{
+    position: relative;
+
+    width: 800px;
+    height: 0;
+    padding-bottom: 100%;
+    /* filter: drop-shadow(-20px 50px 40px rgb(40, 76, 58)); */
+    /* overflow: hidden; */
+}
+  .banner{
+ 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 30% 0;
+
+
+    /* transition: transform 0.1s ease; */
+}
+
+@media(max-width: 1630px){
+    .absolute_wrapper{
+        right: -20%;
+
+        transform: scale(0.9);
+    }
+}
+@media(max-width: 1350px){
+    .absolute_wrapper{
+        right: -15%;
+        bottom: -40%;
+
+        transform: scale(0.8);
+    }
+}
+@media(max-width:1115px){
+    .absolute_wrapper{
+        right: -10%;
+        bottom: -30%;
+    }
+}
+@media(max-width:925px){
+    .absolute_wrapper{
+        bottom: -100%;
+        right: 0;
+    }
+}
+@media(max-width: 645px){
+    .absolute_wrapper{
+        bottom: -100%;
+        right: -15%;
+        transform: scale(0.7);
+    }
+}
+@media(max-width: 545px){
+    .absolute_wrapper{
+        bottom: -100%;
+        right: -20%;
+        transform: scale(0.7);
+    }
+}
+@media(max-width: 485px){
+    .absolute_wrapper{
+        bottom: -70%;
+        right: -25%;
+        transform: scale(0.6);
+    }
+}
+@media(max-width: 450px){
+    .absolute_wrapper{
+        right: -40%;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

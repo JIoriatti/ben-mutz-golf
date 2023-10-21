@@ -1,0 +1,110 @@
+.mobile_nav{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    right: 0;
+    top: 0;
+    height: 100dvh;
+    padding: 6rem 3rem 3rem;
+    /* border-radius: 8px 0 0 8px; */
+    background-image: var(--background);
+    z-index: 1000;
+
+    /* overflow-y: scroll; */
+
+    transform: translateX(100%);
+
+    box-shadow: -5px 0 5px -5px rgba(81, 137, 114, 0.11);
+
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.exit{
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    cursor: pointer;
+    filter: invert(100%);
+}
+.exit:focus{
+    outline: 2px solid var(--color_primary);
+}
+.mobile_nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+}
+.mobile_nav ul li{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color_primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    margin-inline: auto;
+
+    transition: color 0.1s ease-in-out;
+}
+
+.mobile_nav ul li::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    bottom: -25px;
+    height: 2px;
+    width: 0;
+    background-color: var(--color_primary);
+    will-change: width;
+
+    transition: width 0.2s ease;
+}
+.mobile_nav ul li:hover::after{
+    background-color: var(--first);
+    width: 100%;
+}
+
+.mobile_nav ul li:hover{
+    color: var(--first);
+}
+
+
+.logo{
+    max-width: 135px;
+    max-height: 154px;
+    margin-inline: auto;
+
+    transition: opacity 0.1s ease-in-out;
+}
+
+.logo:hover{
+    opacity: 0.8;
+}
+.modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100dvh;
+    width: 100vw;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 999;
+    background-color: rgba(20, 20, 20, 0.376);
+
+    transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media(max-width: 768px){
+    .mobile_nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .logo{
+        max-width: calc(30dvw * var(--logo_aspect_ratio));
+        max-height: calc(30dvw);
+    }
+}

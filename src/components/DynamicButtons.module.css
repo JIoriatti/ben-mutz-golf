@@ -1,0 +1,33 @@
+.container{
+    position: absolute;
+    right: 10rem;
+    display: flex;
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    transform: scale(0.5);
+}
+
+.divider{
+    display: inline-block;
+    height: 40px;
+    width: 1px;
+    background-color: var(--fourthT);
+}
+/* .wrapper{
+    display: flex;
+    padding: 1rem 6rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    
+} */
+
+.show{
+    opacity: 1;
+    pointer-events: initial;
+}
+.hide{
+    opacity: 0;
+    pointer-events: none;
+}

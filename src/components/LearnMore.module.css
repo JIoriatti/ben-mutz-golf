@@ -1,0 +1,49 @@
+.learn_more{
+    position: relative;
+    font-size: 1.25rem;
+    margin-top: auto;
+    text-decoration: none;
+    width: max-content;
+    /* padding-left: 1.5rem; */
+
+    background-image: linear-gradient(to left, #afd6c5 4%, #a8d7bd 45%, #5bbc88);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.learn_more::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    pointer-events: none;
+
+    height: 1px;
+    width: 100%;
+    
+    background-image: linear-gradient(to left, #afd6c5 4%, #a8d7bd 45%, #5bbc88);
+
+    transition: width 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+.learn_more:hover::after{
+    width: 0%;
+}
+.learn_more:hover .arrow{
+    transform: translateX(10px);
+}
+.arrow{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    vertical-align: middle;
+    margin-left: 12px;
+    background-image: url('/arrow.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    filter: invert(100%);
+    transition: transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    /* filter: invert(68%) sepia(59%) saturate(324%) hue-rotate(95deg) brightness(86%) contrast(88%); */
+}

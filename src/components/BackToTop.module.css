@@ -1,0 +1,40 @@
+.btt{
+    position: relative;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    color: var(--first);
+    font-weight: 600;
+    cursor: pointer;
+    width: max-content;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-inline: auto;
+
+    transition: color 0.2s var(--timing);
+}
+.btt::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin-inline: auto;
+    top: -70%;
+    background-image: url('/arrow.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: invert(70%) sepia(67%) saturate(282%) hue-rotate(95deg) brightness(82%) contrast(90%);
+    rotate: -90deg;
+    height: 15px;
+    width: 15px;
+
+    transition: top 0.2s var(--timing), transform 0.2s var(--timing);
+}
+.btt:hover{
+    color: white;
+}
+.btt:hover.btt::before{
+    transform: scale(1.1);
+    top: -80%;
+    filter: invert(100%);
+}

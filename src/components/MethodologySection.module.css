@@ -1,0 +1,118 @@
+.container{
+    /* opacity: 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    padding: var(--section_padding) 0;
+    /* background-color: var(--sub_header_bg);
+     */
+
+    /* background-image: linear-gradient(90deg, var(--dark) 6%, var(--darker) 89%);    padding: var(--section_padding) calc(var(--section_padding) + var(--side_pad)); */
+     
+    /* color: var(--fourth); */
+    color: var(--color_primary);
+    margin-bottom: 6rem;
+    margin-top: 4rem;
+
+    /* animation: fade-in 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 2s forwards; */
+}
+.heading{
+    /* color: var(--fourth); */
+    color: var(--color_primary);
+    text-align: center;
+
+}
+.sub_heading{
+    margin-bottom: 3rem;
+}
+.methods_container{
+    /* opacity: 0; */
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.method_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    flex: 0 0 30%;
+    border: 1px solid var(--firstT);
+    border-radius: 0.375rem;
+
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    background-image: linear-gradient(270deg, rgba(150, 201, 176, 0.1), rgba(150, 201, 176, 0.05));
+    border: 1px solid rgba(150, 201, 179, 0.15);
+    box-shadow: 0 4px 40px rgba(81, 137, 114, 0.11);
+    padding: 2rem;
+
+    opacity: 0;
+
+    transform-style: preserve-3d;
+    transform: translateY(50%);
+    transition: transform 2s var(--timing), opacity 2s var(--timing);
+}
+
+    
+
+.method_heading{
+    font-size: 30px;
+    text-align: center;
+}
+.method_description{
+    padding: 0 1.5rem;
+    text-align: center;
+    color: var(--color_secondary);
+    font-size: 16px;
+    padding: 1rem;
+}
+.icon{
+    /* filter: var(--filter); */
+    filter: invert(100%);
+}
+
+
+
+
+@media(max-width: 1250px){
+    .container{
+        max-width: 800px;
+        width: 90%;
+    }
+    .methods_container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media(max-width: 785px){
+    .container{
+        /* gap: 3rem; */
+        padding: var(--section_padding) var(--side_pad);
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+    }
+}
+@media(max-width: 485px){
+    .container{
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

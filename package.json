@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "flickity": "^3.0.0",
+    "next": "^13.5.4",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest"
+    "react-hook-form": "^7.47.0"
   },
   "devDependencies": {
     "eslint": "latest",

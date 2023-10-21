@@ -1,0 +1,30 @@
+.contact_btn{
+    all: unset;
+    position: absolute;
+    /* inset: 0; */
+    margin-inline: auto;
+    right: 6rem;
+    color: var(--first);
+    border: 1px solid var(--first);
+    border-radius: 20px;
+    background-color: unset;
+    cursor: pointer;
+
+    top: calc(50% - 14.5px);
+    padding: 1px 30px 2px 30px;
+    width: max-content;
+    /* height: max-content; */
+
+    transition: 0.2s color cubic-bezier(0.165, 0.84, 0.44, 1), 0.2s background-color cubic-bezier(0.165, 0.84, 0.44, 1), 0.2s border cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.contact_btn:hover{
+    color: var(--light);
+    background-color: rgba(255, 255, 255, 0.436);
+    border: 1px solid var(--light);
+}
+
+@media(max-width: 1350px){
+    .contact_btn{
+        position: static;
+    }
+}

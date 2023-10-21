@@ -1,0 +1,41 @@
+.container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 100% 0;
+    margin: auto;
+    height: 100dvh;
+    width: 100vw;
+    z-index: 0;
+    pointer-events: none;
+    
+    opacity: 0.4;
+    
+    margin-inline: auto;
+
+    transform: translateZ(-20px) scale(3);
+      
+  }
+  
+  .bmg{
+    font-family: 'Iceberg', sans-serif;
+    color: var(--dark);
+    font-size: clamp(150px, calc(50vw), 1000px);
+    /* letter-spacing: -5vw; */
+  
+    background-image: linear-gradient(to left,#85b098 35%, #5bbc88 65%, var(--dark));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    opacity: 0.2;
+    
+  }
+  
+  .hide{
+    display: none;
+  }
+  .show{
+    display: flex;
+  }

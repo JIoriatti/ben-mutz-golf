@@ -1,0 +1,80 @@
+.book_now_link{
+    width: max-content;
+}
+.book_now{
+    all: unset;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    /* box-shadow: 2px 2px 10px -3px var(--box_shadow_light); */
+    border-radius: 4px;
+    /* clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 20%); */
+    background-color: var(--first);
+    color: var(--color_primary);
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 8px 40px;    
+
+    backdrop-filter: blur(2px);
+    /* background-image: linear-gradient(270deg,  var(--first), rgba(150, 201, 176, 0.1)); */
+
+    transition: background-color 0.3s ease;
+}
+.fade_in_book_now{
+    opacity: 0;
+    animation: fadeIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 2s forwards;
+}
+.arrow{
+    margin: auto;
+    margin-left: 0.5rem;
+
+    filter: invert(5%) sepia(53%) saturate(474%) hue-rotate(113deg) brightness(92%) contrast(95%);
+
+    transition: transform 0.3s ease;
+}
+.book_now:hover .arrow{
+    transform: translateX(10px);
+}
+
+.book_now:hover{
+    background-color: var(--second);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+@media(max-width: 735px){
+    .book_now[data-id='footer'],.book_now{
+        font-size: 15px;
+        padding: 6px 26px;   
+    }
+    .wrapper{
+        padding: 1rem;
+    }
+    .arrow{
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media(max-width: 525px){
+    /* .book_now{
+        font-size: 16px;
+        padding: 6px 26px;   
+    } */
+    .wrapper{
+        padding: 1rem;
+    }
+    .arrow{
+        height: 10px;
+        width: 10px;
+    }
+}

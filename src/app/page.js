@@ -1,95 +1,42 @@
-import Image from 'next/image'
 import styles from './page.module.css'
+import Intro from '@/components/Intro'
+import KissSection from '@/components/KissSection'
+import StudentCountSection from '@/components/StudentCountSection'
+import MethodologySection from '@/components/MethodologySection'
+
+import PhotoGallery from '@/components/PhotoGallery'
+import Contact from '@/components/Contact'
+import P2PSection from '@/components/P2PSection'
+import FlickityCarousel from '@/components/FlickityCarousel'
+import HeroImage from '@/components/HeroImage'
+import BackToTop from '@/components/BackToTop'
+import DynamicFooter from '@/components/DynamicFooter'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <>
+      {/* <Header/> */}
+      
+      <main className={styles.main}>
+        <section className={styles.hero_container}>
+          <HeroImage />
+          <Intro />
+        </section>
+        <MethodologySection />
+        <P2PSection />
+        <KissSection />
+        {/* <TestimonialCarousel /> */}
+        <StudentCountSection />
+        <h3 className={styles.testimonial_header + ' h2_heading'}>See what students have to say:</h3>
+        <FlickityCarousel />
+        <h3 className={styles.photo_gallery_header}>Check out Ben on Facebook</h3>
+        <PhotoGallery />
+        <h4 className={styles.contact_header} id='contact'>Get in touch</h4>
+        <p className={styles.contact_sub_header}>Leave your name, email, and message for Ben</p>
+        <Contact/>
+        <BackToTop />
+        {/* <DynamicFooter /> */}
+      </main>
+    </>
   )
 }

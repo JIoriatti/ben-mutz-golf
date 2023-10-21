@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+    background-color: var(--first);
+
+    animation: fadeColor 2.5s ease forwards;
+}
+.logo{
+    font-family: 'Iceberg', sans-serif;
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: clamp(100px, 25vw, 200px);
+
+    background: linear-gradient(45deg,  var(--darker) 45%, var(--first) 65%, #d1ede1);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: loadColor 10s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+
+@keyframes fadeColor{
+    0%{
+        background-color: var(--first);
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        background-color: var(--darker);
+    }
+}
+@keyframes loadColor{
+    from{
+        background-position: 20vw 50%;
+    }
+    to{
+        background-position: -50vw 50%;
+    }
+}

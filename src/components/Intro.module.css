@@ -1,0 +1,211 @@
+.container{
+    position: relative;
+    padding: 5rem 0 0 0;
+    max-width: 1000px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    z-index: 5;
+
+
+   
+    /* border: 1px solid rgba(150, 201, 179, 0.15); */
+    /* box-shadow: 0 4px 40px rgba(81, 137, 114, 0.11); */
+
+
+    /* text-align: center; */
+    align-items: flex-start;
+
+}
+.link{
+    position: relative;
+    background-image: linear-gradient(to left, #afd6c5 20%, #a8d7bd 45%, #5bbc88);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    pointer-events: none;
+
+    height: 1px;
+    width: 100%;
+    
+    background-image: linear-gradient(to left, #afd6c5 20%, #a8d7bd 45%, #5bbc88);
+
+
+}
+/* .link:hover,.link:hover::after{
+    animation: glare 0.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+} */
+.heading{
+    opacity: 0;
+    font-size: 72px;
+}
+.mutz_word{
+    display: inline-block;
+    word-break: initial;
+    max-width: max-content;
+
+    background-image: linear-gradient(to left, #afd6c5 4%, #a8d7bd 45%, #5bbc88);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+}
+.mutz_letter{
+    display: inline-block;
+    opacity: 0;
+    /* animation-name: mutz;
+    
+
+    
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+    animation-delay: 2s;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+}
+.sub_heading{
+    opacity: 0;
+    animation: fadeIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 2.8s forwards;
+    font-size: 24px;
+    /* color: var(--theme_green); */
+    color: var(--color_primary);
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+
+    background-image: linear-gradient(to left, var(--color_primary) 12%, #afd6c5 40%, #a8d7bd 70%, #5bbc88);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+}
+.fade_in{
+    animation: fadeIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 2.5s forwards;
+}
+
+.description{
+    opacity: 0;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+
+    animation: fadeIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 3.1s forwards;
+}
+.button_container{
+    /* pointer-events: none; */
+    opacity: 0;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    animation: fadeIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) 3.4s forwards;
+}
+
+.ball_container{
+    margin-top: 5rem;
+    display: flex;
+}
+
+@keyframes mutz {
+    from{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideIn{
+    from{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+        
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(clamp(100px, 100%, 300px));
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
+    }
+}
+@keyframes fadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-50vw);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glare { 
+    0%{background-position:10% 0%}
+    50%{background-position:91% 100%}
+    100%{background-position:10% 0%}
+}
+@media(max-width: 1630px){
+    .container{
+        max-width: 800px;
+    }
+}
+@media(max-width: 1350px){
+    .container{
+        /* max-width: 80%; */
+        padding: 3rem 0 0 0;
+    }
+    .heading,.mutz_letter,.mutz_word{
+        font-size: 56px;
+    }
+    .button_container{
+        flex-direction: column;
+    }
+    .button_container a:last-child{
+        align-self: flex-start;
+    }
+}
+@media(max-width:1115px){
+    .container{
+        max-width: 70%;
+    }
+}
+@media(max-width: 940px){
+    .container{
+        max-width: 60%;
+        padding: 1rem 0 0 0;
+    }
+}
+@media(max-width:925px){
+    .container{
+      max-width: unset;
+    }
+}
+@media(max-width: 767px){
+    .heading,.mutz_word{
+        font-size: 2.5rem;
+    }
+    .sub_heading{
+        font-size: 1rem;
+    }
+}

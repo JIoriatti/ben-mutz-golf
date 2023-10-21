@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    gap: 1%;
+    margin-inline: auto;
+    margin-top: 3rem;
+    width: 100%;
+    justify-content: center;
+}
+.tick{
+    height: 2px;
+    width: 30px;
+    background-color: var(--tick_inactive);
+}
+.active{
+    background-color: var(--first);
+}
+
+
+@media(max-width: 785px){
+    .container{
+        gap: 10px;
+    }
+    .tick{
+        width: 20px;
+    }
+}
