@@ -59,6 +59,8 @@
 
     min-height: 269px;
     min-width: 403px;
+
+    background: #1a231fc3;
 }
 .img{
     position: absolute;

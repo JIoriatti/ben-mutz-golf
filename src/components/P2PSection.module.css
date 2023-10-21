@@ -60,6 +60,8 @@
    
     align-self: center;
 
+    background: #1a231fc3;
+
     transition-delay: 0.5s;
     transform: translateY(40%);
 }

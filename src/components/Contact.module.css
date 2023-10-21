@@ -22,6 +22,7 @@
     rotate: 90deg;
     z-index: 1;
     overflow: hidden;
+    background: #1a231fc3;
 }
 .img_wrapper[data-pos='right']{
     /* flex: 0 0 12%;

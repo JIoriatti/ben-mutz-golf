@@ -30,6 +30,8 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0.375rem;
+
+    background: #1a231fc3;
 }
 .image{
     position: absolute;

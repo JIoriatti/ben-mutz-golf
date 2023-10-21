@@ -198,7 +198,12 @@ li.dot::marker{
 .no_scroll{
   overflow: hidden;
 }
+.image_loading{
+  background: #1a231fc3;
+}
+/* @keyframes loading{
 
+} */
 @keyframes fadeIn{
   from{
       opacity: 0;
